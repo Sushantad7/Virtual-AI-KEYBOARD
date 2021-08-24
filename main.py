@@ -10,7 +10,7 @@ cap.set(4,720)
 
 
 detector = HandDetector(detectionCon=0.8)
-alps= [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],    #ENGLISH
+alps= [["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],     # list of alphabets 
         ["A", "S", "D", "F", "G", "H", "J", "K", "L", ";"],
         ["Z", "X", "C", "V", "B", "N", "M", ",", ".", "/"]]
 
@@ -79,7 +79,7 @@ while True:
                     keyboard.press(button.text)
                     cv2.rectangle(img, button.pos, (x + w, y + h), (0, 255, 0), cv2.FILLED)
                     cv2.putText(img, button.text, (x + 20, y + 65),
-                                cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 4)
+                                cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), 4)
                     finalText += button.text
                     sleep(0.15)
 
